@@ -4,7 +4,7 @@ _A simple Laravel web application to be used by nurses to store the blood pressu
 ## Notes
 
 ### Exporting Data
-For good user experience and optimum performance of the application in case of large data exports, the export was queued in batched jobs. Hence, a queue should be started (further notes found below).
+For good user experience and optimum performance of the application in case of large data exports, exports are queued in batched jobs. Hence, a queue should be started (further notes found below).
 
 ## Features Implemented
 * Page for creating patients
