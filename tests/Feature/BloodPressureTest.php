@@ -4,13 +4,14 @@ namespace Tests\Feature;
 
 use App\Models\Patient;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Tests\TestCase;
 
 class BloodPressureTest extends TestCase
 {
 
-    use DatabaseMigrations;
+    use DatabaseMigrations, RefreshDatabase;
 
     public function testCanCreateBloodPressureReading()
     {

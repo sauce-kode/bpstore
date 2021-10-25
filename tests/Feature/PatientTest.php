@@ -5,16 +5,15 @@ namespace Tests\Feature;
 use App\Models\Patient;
 use Illuminate\Bus\PendingBatch;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Bus;
 use Livewire\Livewire;
 use Tests\TestCase;
 
 class PatientTest extends TestCase
 {
-    
-    // use RefreshDatabase;
 
-    use DatabaseMigrations;
+    use DatabaseMigrations, RefreshDatabase;
 
     public function testCanCreatePatient()
     {
