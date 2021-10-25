@@ -65,3 +65,8 @@ Start queue (Or depending on your OS, you can configure a supervisor)
 ```sh
 php artisan queue:work
 ```
+
+Run tests
+```sh
+php artisan test
+```
