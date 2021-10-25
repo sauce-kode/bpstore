@@ -1,0 +1,1 @@
+<a href="{{ route('patient.reading.add', $patientId) }}" class="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded">Read BP</a>
