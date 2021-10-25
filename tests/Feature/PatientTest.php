@@ -2,7 +2,10 @@
 
 namespace Tests\Feature;
 
+use App\Models\Patient;
+use Illuminate\Bus\PendingBatch;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Support\Facades\Bus;
 use Livewire\Livewire;
 use Tests\TestCase;
 
@@ -82,7 +85,12 @@ class PatientTest extends TestCase
 
     public function testCanExportPatients()
     {
-        
+        Bus::fake();
+        Patient::factory()->count(1000)->create();
+        Livewire::test('export-patient')->call('export');
+        Bus::assertBatched(function(PendingBatch $batch){
+            return $batch->name == 'export-patients';
+        });
     }
 
 }

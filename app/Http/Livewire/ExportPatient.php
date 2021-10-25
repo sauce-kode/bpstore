@@ -20,7 +20,7 @@ class ExportPatient extends Component
 
         $batch = Bus::batch([
             new ExportJob(),
-        ])->dispatch();
+        ])->name('export-patients')->dispatch();
 
         $this->batchId = $batch->id;
     }
